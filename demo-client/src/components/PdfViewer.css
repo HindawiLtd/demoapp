@@ -1,0 +1,10 @@
+.pdf-container {
+  border: 1px solid black;
+}
+
+.pagination-handle {
+  display: inline-flex;
+  margin-left: 1rem;
+  font-size: 2em;
+  cursor: pointer;
+}
