@@ -46,3 +46,6 @@ cd "$BASEDIR"/demo-client
 cd "$BASEDIR"/demo-api
 timestamp=$(date +"%Y%m%d%H%M")
 push_new_docker_image name=$APP_NAME tag=$timestamp
+
+echo
+echo Docker image $APP_NAME pushed with tag $timestamp
