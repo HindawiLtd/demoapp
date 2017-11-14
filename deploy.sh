@@ -7,6 +7,15 @@ readonly APP_NAME=demoapp
 readonly AWS_ACCOUNT=109754198917
 readonly AWS_REGION=eu-west-2
 
+check_installed () {
+    local cmd=$1
+    if ! hash $1 2> /dev/null; then
+        echo "Error: '$cmd' command was not found"
+        echo "Try: brew install $cmd"
+        exit 1
+    fi
+}
+
 check_aws_credentials () {
     if [[ -z "$AWS_PROFILE" && -z "$AWS_ACCESS_KEY_ID" ]]; then
         echo "Error: did not find AWS credentials"
@@ -25,6 +34,8 @@ push_new_docker_image () {
 }
 
 # Validation
+check_installed aws
+check_installed docker
 check_aws_credentials
 
 # Build client
