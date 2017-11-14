@@ -137,28 +137,38 @@ In the ECS (EC2 Container Services) section of the AWS Console, follow these ste
 
 1. In the [list of **Task Definitions**](https://eu-west-2.console.aws.amazon.com/ecs/home?region=eu-west-2#/taskDefinitions), **select** the one named `demoapp-taskdef` and **Create new revision**
 
-![taskdef-new-revision](screenshots/taskdef-new-revision.png)
+<p align="center">
+   <img src="screenshots/taskdef-new-revision.png">
+</p>
 
 2. In the list of **Container Definitions** click on the link of the `demoapp` Container Name
 
-![taskdef-edit-container](screenshots/taskdef-edit-container.png)
+<p align="center">
+   <img src="screenshots/taskdef-edit-container.png">
+</p>
 
 3. In the sliding side panel, replace the tag part of the **Image** field with the tag noted from the previous section (e.g. `201711141912`)
 
-![taskdef-edit-image](screenshots/taskdef-edit-image.png)
+<p align="center">
+   <img src="screenshots/taskdef-edit-image.png">
+</p>
 
 4. Press **Update** to close the side panel
 5. Press **Create** to create a new revision of the task definition
 6. Press the **Actions** button and select the option to **Update Service**
 
-![taskdef-update-service](screenshots/taskdef-update-service.png)
+<p align="center">
+   <img src="screenshots/taskdef-update-service.png">
+</p>
 
 7. Press **Next Step** 3 times to move through steps 1–3 and on step 4 press **Update Service**
 8. In the following **Launch Status** page saying “Service updated successfully” press **View Service**
 
 Wait a minute of so until AWS switches over traffic to the new container. After a while you should see the new task definition revision launched and being the only one running:
 
-![service-tasks](screenshots/service-tasks.png)
+<p align="center">
+   <img src="screenshots/service-tasks.png">
+</p>
 
 *Note: See also the **Events** as it is also very useful to monitor what AWS is doing during the switchover and to identify the reason for any issues that might occur.*
 
